@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Breakout Game</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One">
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F19CBB;
+            overflow: hidden;
+        }
+
+        * {
+            font-size: "Germania One";
+        }
+
+        #game-container {
+            position: relative;
+        }
+
+        #sound {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+        }
+
+        #gameover {
+            position: absolute;
+            width: 400px;
+            height: 500px;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        #youwon {
+            width: 330px;
+            position: absolute;
+            top: 170px;
+            left: 35px;
+            display: none;
+        }
+
+        #youlose {
+            width: 330px;
+            position: absolute;
+            top: 100px;
+            left: 35px;
+            display: none;
+        }
+
+        #restart {
+            position: absolute;
+            top: 400px;
+            left: 150px;
+            cursor: pointer;
+            font-size: 1.50em;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="breakout" width="400" height="500"></canvas>
+        <div class="sound">
+            <img src="soundOn.jpg" alt="" id="sound">
+        </div>
+    </div>
+
+    <div id="gameover">
+        <img src="youwin.jpg" alt="" id="youwon">
+        <img src="gameover.jpg" alt="" id="youlose">
+        <div id="restart">Play Again!</div>
+    </div>
+
+    <script src="components.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
